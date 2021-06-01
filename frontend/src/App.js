@@ -1,15 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Footer/>
-    </div>
-  );
+
+const App = () => {
+      return (
+        <Router>
+          <Header />
+          <main className='py-3'>
+            <Container>
+
+            </Container>
+            </main>
+      <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App
