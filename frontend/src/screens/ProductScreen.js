@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
 import Rating from '../components/Rating'
 const ProductScreen = ({match}) => {
-    const product = products.find
+    const product = 1;
     return (
         <div>
             <Link className='btn btn-light my-3' to='/'>
@@ -78,7 +78,7 @@ const ProductScreen = ({match}) => {
 
                   <ListGroup.Item>
                     <Button
-                      onClick={addToCartHandler}
+                      // onClick={addToCartHandler}
                       className='btn-block'
                       type='button'
                       disabled={product.countInStock === 0}
