@@ -11,6 +11,7 @@ import RegisterScreen from './screens/RegisterScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import { login } from './actions/userActions'
 import { useDispatch, useSelector } from 'react-redux'
+import ShippingScreen from './screens/ShippingScreen'
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
               <Route path='/login' component={LoginScreen}></Route>
               <Route path='/register' component={RegisterScreen}></Route>
               <Route path='/profile' component={ProfileScreen}></Route>
+              <Route path='/shipping' component={ShippingScreen}></Route>
               <Route exact path='/' component={HomeScreen}></Route>
               <Route path='/product/:id' component={ProductScreen}></Route>
               <Route path='/cart/:id?' component={CartScreen}></Route>
