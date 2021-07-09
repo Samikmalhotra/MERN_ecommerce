@@ -12,6 +12,7 @@ import ProfileScreen from './screens/ProfileScreen'
 import { login } from './actions/userActions'
 import { useDispatch, useSelector } from 'react-redux'
 import ShippingScreen from './screens/ShippingScreen'
+import PaymentScreen from './screens/PaymentScreen'
 
 
 const App = () => {
@@ -19,8 +20,7 @@ const App = () => {
   useEffect(()=>{
     var x =(localStorage.getItem('userInfo'))
     var y = JSON.parse(x);
-    console.log(y.email, y.password)
-    dispatch(login(y.email, y.password))
+
 
   },[])
 
@@ -32,6 +32,7 @@ const App = () => {
               <Route path='/login' component={LoginScreen}></Route>
               <Route path='/register' component={RegisterScreen}></Route>
               <Route path='/profile' component={ProfileScreen}></Route>
+              <Route path='/payment' component={PaymentScreen }></Route>
               <Route path='/shipping' component={ShippingScreen}></Route>
               <Route exact path='/' component={HomeScreen}></Route>
               <Route path='/product/:id' component={ProductScreen}></Route>
