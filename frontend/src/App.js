@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ShippingScreen from './screens/ShippingScreen'
 import PaymentScreen from './screens/PaymentScreen'
 import PlaceOrderScreen from './screens/PlaceOrderScreen'
+import OrderScreen from './screens/OrderScreen'
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
               <Route path='/profile' component={ProfileScreen}></Route>
               <Route path='/payment' component={PaymentScreen }></Route>
               <Route path='/placeorder' component={PlaceOrderScreen }></Route>
+              <Route path='/order/:id' component={OrderScreen}></Route>
               <Route path='/shipping' component={ShippingScreen}></Route>
               <Route exact path='/' component={HomeScreen}></Route>
               <Route path='/product/:id' component={ProductScreen}></Route>
