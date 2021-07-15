@@ -118,7 +118,7 @@ const getUsers = asyncHandler(async (req,res) => {
 // @route   GET /api/users/:id
 // @acess   Private/Admin
 const getUserById = asyncHandler(async (req,res) => {
-    const user = await User.find(req.params.id).select('-password')
+    const user = await User.findById(req.params.id).select('-password')
     res.json(user)
 })
 
