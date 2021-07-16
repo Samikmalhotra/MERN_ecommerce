@@ -19,7 +19,7 @@ import {
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id
 
-  const [sdkReady, setSdkReady] = useState(false)
+  // const [sdkReady, setSdkReady] = useState(false)
 
   const dispatch = useDispatch()
 
@@ -63,11 +63,12 @@ const OrderScreen = ({ match, history }) => {
     //   document.body.appendChild(script)
     // }
 
-    // if (!order || successPay || successDeliver || order._id !== orderId) {
-    //   dispatch({ type: ORDER_PAY_RESET })
-    //   dispatch({ type: ORDER_DELIVER_RESET })
-    //   dispatch(getOrderDetails(orderId))
-    // } else if (!order.isPaid) {
+    if (!order || successPay || successDeliver || order._id !== orderId) {
+      dispatch({ type: ORDER_PAY_RESET })
+      dispatch({ type: ORDER_DELIVER_RESET })
+      dispatch(getOrderDetails(orderId))
+    }
+    //  else if (!order.isPaid) {
     //   if (!window.paypal) {
     //     addPayPalScript()
     //   } else {
@@ -208,10 +209,10 @@ const OrderScreen = ({ match, history }) => {
                   )}
                 </ListGroup.Item>
               )} */}
-              {loadingDeliver && <Loader />}
+              {/* {loadingDeliver && <Loader />} */}
               {userInfo &&
                 userInfo.isAdmin &&
-                order.isPaid &&
+                // order.isPaid &&
                 !order.isDelivered && (
                   <ListGroup.Item>
                     <Button
